@@ -13,7 +13,7 @@ class App extends Component {
   }
 
   componentDidUpdate (prevProps,prevState){
-    if(prevState.consulta!=this.state.consulta){
+    if(prevState.consulta!==this.state.consulta){
       this.consultarApi();
     }
    
@@ -35,7 +35,7 @@ class App extends Component {
     // query con fetch api
     fetch(url)
       .then(respuesta=>{
-        return respuesta.JSON();
+        return respuesta.json();
       })
       .then(datos=>{
         this.setState({

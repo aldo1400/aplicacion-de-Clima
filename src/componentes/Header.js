@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 const Header =(props)=>{
         return (
             <div>
@@ -10,6 +10,9 @@ const Header =(props)=>{
                 </nav>  
             </div>
         );
+}
+Header.propTypes={
+    titulo:PropTypes.string.isRequired
 }
 
 export default Header;
